@@ -4,19 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyPortofolio</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "beige-bg": "#EBE8DB",
+              "dusty-rose": "#D76C82",
+              "maroon-accent": "#B03052",
+              "dark-maroon": "#3D0301",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Mengatur warna teks default agar kontras dengan background beige */
+      body {
+        color: #3d0301; /* Menggunakan dark-maroon sebagai warna teks default */
+      }
+    </style>
   </head>
 
-  <body class="bg-gray-50">
-    <header id="home" class="relative bg-indigo-600 text-white">
+  <body class="bg-beige-bg">
+    <header id="home" class="relative bg-dark-maroon text-white">
       <div class="container mx-auto px-4 py-24 md:py-32">
         <div class="flex flex-col-reverse md:flex-row items-center gap-8">
           <div class="md:w-3/5 lg:w-1/2 text-center md:text-left">
             <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
               Audena Kanaya Najmafala Fiqadiani
             </h1>
-            <p class="text-xl text-indigo-200 mb-6">Mahasiswa</p>
-            <p class="text-lg text-indigo-100 mb-8 max-w-xl mx-auto md:mx-0">
+            <p class="text-xl text-beige-bg/70 mb-6">Mahasiswa</p>
+            <p class="text-lg text-beige-bg/90 mb-8 max-w-xl mx-auto md:mx-0">
               Saya adalah web developer yang bersemangat dengan fokus pada
               pengembangan frontend yang kreatif dan fungsional. Mencari
               kesempatan untuk mengembangkan keterampilan dan berkontribusi pada
@@ -25,13 +50,13 @@
             <div class="flex gap-4 justify-center md:justify-start">
               <a
                 href="#projects"
-                class="bg-white text-indigo-600 font-bold py-3 px-6 rounded-full hover:bg-indigo-100 transition duration-300"
+                class="bg-maroon-accent text-white font-bold py-3 px-6 rounded-full hover:bg-dark-maroon transition duration-300"
               >
                 Lihat Proyek
               </a>
               <a
                 href="#contact"
-                class="border-2 border-white text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-indigo-600 transition duration-300"
+                class="border-2 border-white text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-dark-maroon transition duration-300"
               >
                 Hubungi Saya
               </a>
@@ -43,7 +68,7 @@
               class="w-64 h-64 md:w-80 md:h-80 p-2 bg-white/20 rounded-full shadow-lg"
             >
               <img
-                src="data:image/svg+xml;charset=UTF-8,%3Csvg width='200' height='200' viewBox='0 0 200 200' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='100' r='100' fill='%234F46E5'/%3E%3Ccircle cx='75' cy='80' r='10' fill='white'/%3E%3Ccircle cx='125' cy='80' r='10' fill='white'/%3E%3Cpath d='M60 120C60 100 140 100 140 120' stroke='white' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E"
+                src="data:image/svg+xml;charset=UTF-8,%3Csvg width='200' height='200' viewBox='0 0 200 200' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='100' r='100' fill='%23B03052'/%3E%3Ccircle cx='75' cy='80' r='10' fill='white'/%3E%3Ccircle cx='125' cy='80' r='10' fill='white'/%3E%3Cpath d='M60 120C60 100 140 100 140 120' stroke='white' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E"
                 alt="Foto Profil"
                 class="w-full h-full object-cover rounded-full"
               />
@@ -62,23 +87,23 @@
         >
           <path
             d="M985.66,92.83C906.67,72,823.78,31.88,765.1,14.42,720.07,5.85,681.22,0,642.79,0,603.65,0,567.34,6.36,527.94,15.6,448.6,32.43,381.44,59.52,309.26,86.46,227.12,115.33,120.26,117.85,0,120H1200V5.85C1132.19,37.15,1055.71,70.39,985.66,92.83Z"
-            class="fill-gray-50"
+            class="fill-beige-bg"
           ></path>
         </svg>
       </div>
     </header>
 
-    <section id="about" class="py-16">
+    <section id="about" class="py-20">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+        <h2 class="text-3xl font-bold text-center mb-12 text-dark-maroon">
           Tentang Saya
         </h2>
         <div class="flex flex-col md:flex-row gap-12 items-start">
           <div class="md:w-1/2">
-            <h3 class="text-2xl font-semibold mb-4 text-indigo-700">
+            <h3 class="text-2xl font-semibold mb-4 text-maroon-accent">
               Keterampilan & Keahlian
             </h3>
-            <p class="text-gray-700 mb-6">
+            <p class="text-dark-maroon/80 mb-6">
               Saya adalah web developer dengan pengalaman dalam membangun
               aplikasi web yang responsif dan user-friendly. Saya memiliki
               pengetahuan yang kuat tentang HTML, CSS, JavaScript, dan berbagai
@@ -86,58 +111,58 @@
             </p>
 
             <div class="mb-6">
-              <h4 class="font-medium text-gray-800 mb-3">
+              <h4 class="font-medium text-dark-maroon mb-3">
                 Bahasa Pemrograman & Framework
               </h4>
               <div class="flex flex-wrap gap-2">
                 <span
-                  class="tech-badge bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+                  class="tech-badge bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
                   >HTML5</span
                 >
                 <span
-                  class="tech-badge bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+                  class="tech-badge bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
                   >CSS3</span
                 >
                 <span
-                  class="tech-badge bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+                  class="tech-badge bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
                   >JavaScript</span
                 >
                 <span
-                  class="tech-badge bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+                  class="tech-badge bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
                   >React</span
                 >
                 <span
-                  class="tech-badge bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+                  class="tech-badge bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
                   >Tailwind CSS</span
                 >
                 <span
-                  class="tech-badge bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+                  class="tech-badge bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
                   >Node.js</span
                 >
               </div>
             </div>
 
             <div>
-              <h4 class="font-medium text-gray-800 mb-3">Tools & Lainnya</h4>
+              <h4 class="font-medium text-dark-maroon mb-3">Tools & Lainnya</h4>
               <div class="flex flex-wrap gap-2">
                 <span
-                  class="tech-badge bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+                  class="tech-badge bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
                   >Git</span
                 >
                 <span
-                  class="tech-badge bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+                  class="tech-badge bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
                   >VS Code</span
                 >
                 <span
-                  class="tech-badge bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+                  class="tech-badge bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
                   >Figma</span
                 >
                 <span
-                  class="tech-badge bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+                  class="tech-badge bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
                   >Responsive Design</span
                 >
                 <span
-                  class="tech-badge bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+                  class="tech-badge bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
                   >API Integration</span
                 >
               </div>
@@ -145,38 +170,38 @@
           </div>
           <div class="md:w-1/2">
             <div class="bg-white p-6 rounded-xl shadow-lg">
-              <h3 class="text-2xl font-semibold mb-4 text-indigo-700">
+              <h3 class="text-2xl font-semibold mb-4 text-maroon-accent">
                 Pendidikan & Pengalaman
               </h3>
 
               <div class="mb-6">
-                <h4 class="font-medium text-gray-800">Universitas XYZ</h4>
-                <p class="text-gray-600 text-sm">
+                <h4 class="font-medium text-dark-maroon">Universitas XYZ</h4>
+                <p class="text-dark-maroon/60 text-sm">
                   Sarjana Ilmu Komputer, 2020-2024
                 </p>
-                <p class="text-gray-700 mt-2">
+                <p class="text-dark-maroon/80 mt-2">
                   Fokus pada pengembangan web dan desain UI/UX. Aktif dalam klub
                   pemrograman kampus.
                 </p>
               </div>
               <div class="mb-6">
-                <h4 class="font-medium text-gray-800">
+                <h4 class="font-medium text-dark-maroon">
                   Bootcamp Web Development
                 </h4>
-                <p class="text-gray-600 text-sm">
+                <p class="text-dark-maroon/60 text-sm">
                   Program Intensif 3 Bulan, 2023
                 </p>
-                <p class="text-gray-700 mt-2">
+                <p class="text-dark-maroon/80 mt-2">
                   Menyelesaikan proyek-proyek praktis dan mempelajari teknologi
                   web terbaru.
                 </p>
               </div>
               <div>
-                <h4 class="font-medium text-gray-800">
+                <h4 class="font-medium text-dark-maroon">
                   Freelance Web Developer
                 </h4>
-                <p class="text-gray-600 text-sm">2022 - Sekarang</p>
-                <p class="text-gray-700 mt-2">
+                <p class="text-dark-maroon/60 text-sm">2022 - Sekarang</p>
+                <p class="text-dark-maroon/80 mt-2">
                   Mengerjakan berbagai proyek website untuk klien lokal.
                 </p>
               </div>
@@ -186,24 +211,21 @@
       </div>
     </section>
 
-    <section
-      id="projects"
-      class="py-16 bg-gradient-to-b from-blue-50 to-indigo-50"
-    >
+    <section id="projects" class="py-20 bg-white">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">
+        <h2 class="text-3xl font-bold text-center mb-4 text-dark-maroon">
           Proyek Terbaik
         </h2>
-        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p class="text-center text-dark-maroon/80 mb-12 max-w-2xl mx-auto">
           Berikut adalah tiga proyek terbaik yang telah saya kerjakan, dengan
           fokus pada problem-solving dan teknologi yang digunakan.
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div
-            class="project-card bg-white rounded-xl overflow-hidden shadow-lg flex flex-col"
+            class="project-card bg-beige-bg rounded-xl overflow-hidden shadow-lg flex flex-col hover:shadow-2xl transition-shadow duration-300"
           >
-            <div class="h-48 bg-indigo-600 flex items-center justify-center">
+            <div class="h-48 bg-dusty-rose flex items-center justify-center">
               <svg
                 class="w-24 h-24 text-white"
                 fill="none"
@@ -220,29 +242,29 @@
               </svg>
             </div>
             <div class="p-6 flex-grow flex flex-col">
-              <h3 class="text-xl font-bold mb-2 text-gray-800">
+              <h3 class="text-xl font-bold mb-2 text-dark-maroon">
                 Aplikasi E-Learning
               </h3>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
-                  class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs font-medium"
+                  class="bg-dusty-rose/30 text-maroon-accent font-semibold px-2 py-1 rounded text-xs"
                   >React</span
                 >
                 <span
-                  class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs font-medium"
+                  class="bg-dusty-rose/30 text-maroon-accent font-semibold px-2 py-1 rounded text-xs"
                   >Node.js</span
                 >
                 <span
-                  class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs font-medium"
+                  class="bg-dusty-rose/30 text-maroon-accent font-semibold px-2 py-1 rounded text-xs"
                   >MongoDB</span
                 >
               </div>
-              <p class="text-gray-600 text-sm flex-grow">
+              <p class="text-dark-maroon/80 text-sm flex-grow">
                 Platform e-learning yang menangani konten video, kuis
                 interaktif, dan pelacakan kemajuan siswa.
               </p>
               <button
-                class="mt-6 w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition"
+                class="mt-6 w-full bg-maroon-accent text-white py-2 rounded-lg hover:bg-dark-maroon transition"
                 onclick="showProjectDetails('project1')"
               >
                 Lihat Detail
@@ -251,9 +273,9 @@
           </div>
 
           <div
-            class="project-card bg-white rounded-xl overflow-hidden shadow-lg flex flex-col"
+            class="project-card bg-beige-bg rounded-xl overflow-hidden shadow-lg flex flex-col hover:shadow-2xl transition-shadow duration-300"
           >
-            <div class="h-48 bg-purple-600 flex items-center justify-center">
+            <div class="h-48 bg-dusty-rose flex items-center justify-center">
               <svg
                 class="w-24 h-24 text-white"
                 fill="none"
@@ -270,29 +292,29 @@
               </svg>
             </div>
             <div class="p-6 flex-grow flex flex-col">
-              <h3 class="text-xl font-bold mb-2 text-gray-800">
+              <h3 class="text-xl font-bold mb-2 text-dark-maroon">
                 E-Commerce Dashboard
               </h3>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
-                  class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs font-medium"
+                  class="bg-dusty-rose/30 text-maroon-accent font-semibold px-2 py-1 rounded text-xs"
                   >Vue.js</span
                 >
                 <span
-                  class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs font-medium"
+                  class="bg-dusty-rose/30 text-maroon-accent font-semibold px-2 py-1 rounded text-xs"
                   >Express</span
                 >
                 <span
-                  class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs font-medium"
+                  class="bg-dusty-rose/30 text-maroon-accent font-semibold px-2 py-1 rounded text-xs"
                   >MySQL</span
                 >
               </div>
-              <p class="text-gray-600 text-sm flex-grow">
+              <p class="text-dark-maroon/80 text-sm flex-grow">
                 Dashboard untuk UMKM mengelola inventaris dan penjualan online
                 dalam satu sistem terintegrasi.
               </p>
               <button
-                class="mt-6 w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition"
+                class="mt-6 w-full bg-maroon-accent text-white py-2 rounded-lg hover:bg-dark-maroon transition"
                 onclick="showProjectDetails('project2')"
               >
                 Lihat Detail
@@ -301,9 +323,9 @@
           </div>
 
           <div
-            class="project-card bg-white rounded-xl overflow-hidden shadow-lg flex flex-col"
+            class="project-card bg-beige-bg rounded-xl overflow-hidden shadow-lg flex flex-col hover:shadow-2xl transition-shadow duration-300"
           >
-            <div class="h-48 bg-blue-600 flex items-center justify-center">
+            <div class="h-48 bg-dusty-rose flex items-center justify-center">
               <svg
                 class="w-24 h-24 text-white"
                 fill="none"
@@ -320,29 +342,29 @@
               </svg>
             </div>
             <div class="p-6 flex-grow flex flex-col">
-              <h3 class="text-xl font-bold mb-2 text-gray-800">
+              <h3 class="text-xl font-bold mb-2 text-dark-maroon">
                 Aplikasi Manajemen Tugas
               </h3>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
-                  class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs font-medium"
+                  class="bg-dusty-rose/30 text-maroon-accent font-semibold px-2 py-1 rounded text-xs"
                   >React Native</span
                 >
                 <span
-                  class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs font-medium"
+                  class="bg-dusty-rose/30 text-maroon-accent font-semibold px-2 py-1 rounded text-xs"
                   >Firebase</span
                 >
                 <span
-                  class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs font-medium"
+                  class="bg-dusty-rose/30 text-maroon-accent font-semibold px-2 py-1 rounded text-xs"
                   >Redux</span
                 >
               </div>
-              <p class="text-gray-600 text-sm flex-grow">
+              <p class="text-dark-maroon/80 text-sm flex-grow">
                 Aplikasi mobile untuk mengelola tugas dan kolaborasi tim yang
                 dapat digunakan secara offline dan online.
               </p>
               <button
-                class="mt-6 w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition"
+                class="mt-6 w-full bg-maroon-accent text-white py-2 rounded-lg hover:bg-dark-maroon transition"
                 onclick="showProjectDetails('project3')"
               >
                 Lihat Detail
@@ -353,17 +375,17 @@
       </div>
     </section>
 
-    <section id="skills" class="py-16">
+    <section id="skills" class="py-20">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+        <h2 class="text-3xl font-bold text-center mb-12 text-dark-maroon">
           Keterampilan Problem-Solving
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-white p-6 rounded-xl shadow-md space-y-4">
+          <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
             <div class="flex items-start">
-              <div class="bg-indigo-100 p-3 rounded-full mr-4 shrink-0">
+              <div class="bg-dusty-rose/30 p-3 rounded-full mr-4 shrink-0">
                 <svg
-                  class="w-6 h-6 text-indigo-600"
+                  class="w-6 h-6 text-maroon-accent"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -378,10 +400,10 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-lg font-semibold text-dark-maroon">
                   Analisis Kebutuhan
                 </h3>
-                <p class="text-gray-600 mt-1">
+                <p class="text-dark-maroon/80 mt-1">
                   Kemampuan mengidentifikasi dan menganalisis kebutuhan
                   pengguna, mengubahnya menjadi fitur yang dapat
                   diimplementasikan.
@@ -389,9 +411,9 @@
               </div>
             </div>
             <div class="flex items-start">
-              <div class="bg-indigo-100 p-3 rounded-full mr-4 shrink-0">
+              <div class="bg-dusty-rose/30 p-3 rounded-full mr-4 shrink-0">
                 <svg
-                  class="w-6 h-6 text-indigo-600"
+                  class="w-6 h-6 text-maroon-accent"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -406,19 +428,19 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-lg font-semibold text-dark-maroon">
                   Debugging & Troubleshooting
                 </h3>
-                <p class="text-gray-600 mt-1">
+                <p class="text-dark-maroon/80 mt-1">
                   Pengalaman mengidentifikasi dan memperbaiki bug dengan
                   pendekatan sistematis dan efisien.
                 </p>
               </div>
             </div>
             <div class="flex items-start">
-              <div class="bg-indigo-100 p-3 rounded-full mr-4 shrink-0">
+              <div class="bg-dusty-rose/30 p-3 rounded-full mr-4 shrink-0">
                 <svg
-                  class="w-6 h-6 text-indigo-600"
+                  class="w-6 h-6 text-maroon-accent"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -433,21 +455,21 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-lg font-semibold text-dark-maroon">
                   Optimasi Performa
                 </h3>
-                <p class="text-gray-600 mt-1">
+                <p class="text-dark-maroon/80 mt-1">
                   Kemampuan mengidentifikasi bottleneck dan mengoptimalkan kode
                   untuk kinerja yang lebih baik.
                 </p>
               </div>
             </div>
           </div>
-          <div class="bg-white p-6 rounded-xl shadow-md space-y-4">
+          <div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
             <div class="flex items-start">
-              <div class="bg-indigo-100 p-3 rounded-full mr-4 shrink-0">
+              <div class="bg-dusty-rose/30 p-3 rounded-full mr-4 shrink-0">
                 <svg
-                  class="w-6 h-6 text-indigo-600"
+                  class="w-6 h-6 text-maroon-accent"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -462,19 +484,19 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-lg font-semibold text-dark-maroon">
                   Kolaborasi Tim
                 </h3>
-                <p class="text-gray-600 mt-1">
+                <p class="text-dark-maroon/80 mt-1">
                   Pengalaman bekerja dalam tim pengembangan dengan menggunakan
                   Git dan metodologi Agile.
                 </p>
               </div>
             </div>
             <div class="flex items-start">
-              <div class="bg-indigo-100 p-3 rounded-full mr-4 shrink-0">
+              <div class="bg-dusty-rose/30 p-3 rounded-full mr-4 shrink-0">
                 <svg
-                  class="w-6 h-6 text-indigo-600"
+                  class="w-6 h-6 text-maroon-accent"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -489,19 +511,19 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-lg font-semibold text-dark-maroon">
                   Adaptasi Teknologi
                 </h3>
-                <p class="text-gray-600 mt-1">
+                <p class="text-dark-maroon/80 mt-1">
                   Kemampuan untuk mempelajari teknologi baru dengan cepat dan
                   mengimplementasikannya dalam proyek.
                 </p>
               </div>
             </div>
             <div class="flex items-start">
-              <div class="bg-indigo-100 p-3 rounded-full mr-4 shrink-0">
+              <div class="bg-dusty-rose/30 p-3 rounded-full mr-4 shrink-0">
                 <svg
-                  class="w-6 h-6 text-indigo-600"
+                  class="w-6 h-6 text-maroon-accent"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -516,10 +538,10 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-lg font-semibold text-dark-maroon">
                   Keamanan Web
                 </h3>
-                <p class="text-gray-600 mt-1">
+                <p class="text-dark-maroon/80 mt-1">
                   Pemahaman tentang praktik keamanan web terbaik dan
                   implementasinya dalam pengembangan aplikasi.
                 </p>
@@ -530,14 +552,14 @@
       </div>
     </section>
 
-    <section id="contact" class="py-16 bg-indigo-600 text-white">
+    <section id="contact" class="py-20 bg-dark-maroon text-white">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-12">Hubungi Saya</h2>
         <div
-          class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden"
+          class="max-w-3xl mx-auto bg-beige-bg rounded-xl shadow-lg overflow-hidden"
         >
           <div class="flex flex-col md:flex-row">
-            <div class="md:w-1/2 p-8 bg-indigo-700">
+            <div class="md:w-1/2 p-8 bg-dusty-rose text-dark-maroon">
               <h3 class="text-2xl font-bold mb-6">Informasi Kontak</h3>
               <div class="space-y-6">
                 <div class="flex items-start">
@@ -556,8 +578,8 @@
                     ></path>
                   </svg>
                   <div>
-                    <h4 class="font-medium">Email</h4>
-                    <p class="text-indigo-200">email@example.com</p>
+                    <h4 class="font-semibold">Email</h4>
+                    <p class="text-dark-maroon/80">email@example.com</p>
                   </div>
                 </div>
                 <div class="flex items-start">
@@ -576,8 +598,8 @@
                     ></path>
                   </svg>
                   <div>
-                    <h4 class="font-medium">Telepon</h4>
-                    <p class="text-indigo-200">+62 812 3456 7890</p>
+                    <h4 class="font-semibold">Telepon</h4>
+                    <p class="text-dark-maroon/80">+62 812 3456 7890</p>
                   </div>
                 </div>
                 <div class="flex items-start">
@@ -602,17 +624,17 @@
                     ></path>
                   </svg>
                   <div>
-                    <h4 class="font-medium">Lokasi</h4>
-                    <p class="text-indigo-200">Jakarta, Indonesia</p>
+                    <h4 class="font-semibold">Lokasi</h4>
+                    <p class="text-dark-maroon/80">Jakarta, Indonesia</p>
                   </div>
                 </div>
               </div>
               <div class="mt-8">
-                <h4 class="font-medium mb-3">Media Sosial</h4>
+                <h4 class="font-semibold mb-3">Media Sosial</h4>
                 <div class="flex space-x-4">
                   <a
                     href="#"
-                    class="bg-white text-indigo-700 p-2 rounded-full hover:bg-indigo-100 transition"
+                    class="bg-beige-bg text-dark-maroon p-2 rounded-full hover:bg-beige-bg/80 transition"
                     ><svg
                       class="w-5 h-5"
                       fill="currentColor"
@@ -625,7 +647,7 @@
                   ></a>
                   <a
                     href="#"
-                    class="bg-white text-indigo-700 p-2 rounded-full hover:bg-indigo-100 transition"
+                    class="bg-beige-bg text-dark-maroon p-2 rounded-full hover:bg-beige-bg/80 transition"
                     ><svg
                       class="w-5 h-5"
                       fill="currentColor"
@@ -638,7 +660,7 @@
                   ></a>
                   <a
                     href="#"
-                    class="bg-white text-indigo-700 p-2 rounded-full hover:bg-indigo-100 transition"
+                    class="bg-beige-bg text-dark-maroon p-2 rounded-full hover:bg-beige-bg/80 transition"
                     ><svg
                       class="w-5 h-5"
                       fill="currentColor"
@@ -651,7 +673,7 @@
                   ></a>
                   <a
                     href="#"
-                    class="bg-white text-indigo-700 p-2 rounded-full hover:bg-indigo-100 transition"
+                    class="bg-beige-bg text-dark-maroon p-2 rounded-full hover:bg-beige-bg/80 transition"
                     ><svg
                       class="w-5 h-5"
                       fill="currentColor"
@@ -665,64 +687,64 @@
                 </div>
               </div>
             </div>
-            <div class="md:w-1/2 p-8">
-              <h3 class="text-2xl font-bold mb-6 text-gray-800">Kirim Pesan</h3>
+            <div class="md:w-1/2 p-8 text-dark-maroon">
+              <h3 class="text-2xl font-bold mb-6">Kirim Pesan</h3>
               <form class="space-y-4">
                 <div>
                   <label
                     for="name"
-                    class="block text-sm font-medium text-gray-700 mb-1"
+                    class="block text-sm font-medium text-dark-maroon/80 mb-1"
                     >Nama</label
                   >
                   <input
                     type="text"
                     id="name"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-800"
+                    class="w-full px-4 py-2 border border-dusty-rose/50 rounded-lg focus:ring-2 focus:ring-maroon-accent focus:border-maroon-accent bg-white"
                     placeholder="Nama Anda"
                   />
                 </div>
                 <div>
                   <label
                     for="email"
-                    class="block text-sm font-medium text-gray-700 mb-1"
+                    class="block text-sm font-medium text-dark-maroon/80 mb-1"
                     >Email</label
                   >
                   <input
                     type="email"
                     id="email"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-800"
+                    class="w-full px-4 py-2 border border-dusty-rose/50 rounded-lg focus:ring-2 focus:ring-maroon-accent focus:border-maroon-accent bg-white"
                     placeholder="email@example.com"
                   />
                 </div>
                 <div>
                   <label
                     for="subject"
-                    class="block text-sm font-medium text-gray-700 mb-1"
+                    class="block text-sm font-medium text-dark-maroon/80 mb-1"
                     >Subjek</label
                   >
                   <input
                     type="text"
                     id="subject"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-800"
+                    class="w-full px-4 py-2 border border-dusty-rose/50 rounded-lg focus:ring-2 focus:ring-maroon-accent focus:border-maroon-accent bg-white"
                     placeholder="Subjek pesan"
                   />
                 </div>
                 <div>
                   <label
                     for="message"
-                    class="block text-sm font-medium text-gray-700 mb-1"
+                    class="block text-sm font-medium text-dark-maroon/80 mb-1"
                     >Pesan</label
                   >
                   <textarea
                     id="message"
                     rows="4"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-800"
+                    class="w-full px-4 py-2 border border-dusty-rose/50 rounded-lg focus:ring-2 focus:ring-maroon-accent focus:border-maroon-accent bg-white"
                     placeholder="Tulis pesan Anda di sini..."
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition"
+                  class="w-full bg-maroon-accent text-white py-2 px-4 rounded-lg hover:bg-dark-maroon transition"
                 >
                   Kirim Pesan
                 </button>
@@ -733,28 +755,28 @@
       </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-8">
+    <footer class="bg-dark-maroon text-beige-bg py-8">
       <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="mb-4 md:mb-0 text-center md:text-left">
             <h2 class="text-2xl font-bold">Nama Saya</h2>
-            <p class="text-gray-400">Web Developer</p>
+            <p class="text-beige-bg/70">Web Developer</p>
           </div>
           <div class="flex space-x-4">
-            <a href="#home" class="hover:text-indigo-400 transition">Home</a>
-            <a href="#about" class="hover:text-indigo-400 transition"
+            <a href="#home" class="hover:text-dusty-rose transition">Home</a>
+            <a href="#about" class="hover:text-dusty-rose transition"
               >Tentang</a
             >
-            <a href="#projects" class="hover:text-indigo-400 transition"
+            <a href="#projects" class="hover:text-dusty-rose transition"
               >Proyek</a
             >
-            <a href="#contact" class="hover:text-indigo-400 transition"
+            <a href="#contact" class="hover:text-dusty-rose transition"
               >Kontak</a
             >
           </div>
         </div>
-        <hr class="border-gray-800 my-6" />
-        <p class="text-center text-gray-400">
+        <hr class="border-beige-bg/20 my-6" />
+        <p class="text-center text-beige-bg/70">
           &copy; 2025 Nama Saya. Hak Cipta Dilindungi.
         </p>
       </div>
@@ -762,20 +784,23 @@
 
     <div
       id="projectModal"
-      class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4 transition-opacity duration-300"
+      class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden flex items-center justify-center p-4 transition-opacity duration-300"
     >
       <div
-        class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto transform transition-transform duration-300 scale-95"
+        class="bg-beige-bg rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto transform transition-transform duration-300 scale-95"
       >
-        <div class="p-6">
-          <div class="flex justify-between items-center mb-6">
-            <h3 id="modalTitle" class="text-2xl font-bold text-gray-800"></h3>
+        <div class="p-8">
+          <div class="flex justify-between items-start mb-6">
+            <h3
+              id="modalTitle"
+              class="text-2xl font-bold text-dark-maroon"
+            ></h3>
             <button
               onclick="closeModal()"
-              class="text-gray-500 hover:text-gray-700"
+              class="text-dark-maroon/50 hover:text-dark-maroon"
             >
               <svg
-                class="w-6 h-6"
+                class="w-8 h-8"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -790,11 +815,14 @@
               </svg>
             </button>
           </div>
-          <div id="modalContent" class="prose max-w-none"></div>
-          <div class="mt-6 flex justify-end">
+          <div
+            id="modalContent"
+            class="prose max-w-none text-dark-maroon/80"
+          ></div>
+          <div class="mt-8 flex justify-end">
             <button
               onclick="closeModal()"
-              class="bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition"
+              class="bg-maroon-accent text-white py-2 px-6 rounded-lg hover:bg-dark-maroon transition"
             >
               Tutup
             </button>
@@ -806,20 +834,22 @@
     <div id="project-data" class="hidden">
       <div id="project1-details" data-title="Aplikasi E-Learning">
         <img
-          src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect fill='%234F46E5' width='800' height='400'/%3E%3Ctext fill='rgba(255,255,255,0.8)' font-family='Arial' font-size='32' x='400' y='200' text-anchor='middle'%3EE-Learning Platform Screenshot%3C/text%3E%3C/svg%3E"
+          src="https://placehold.co/800x400/B03052/EBE8DB?text=E-Learning+Platform"
           alt="E-Learning Platform"
           class="w-full rounded-lg mb-6"
         />
-        <h4 class="text-xl font-semibold text-gray-800 mb-2">
+        <h4 class="text-xl font-semibold text-dark-maroon mb-2">
           Deskripsi Proyek
         </h4>
-        <p class="text-gray-700">
+        <p>
           Aplikasi e-learning yang komprehensif untuk lembaga pendidikan dengan
           fitur manajemen konten, streaming video, kuis interaktif, dan analitik
           pembelajaran.
         </p>
-        <h4 class="text-xl font-semibold text-gray-800 mt-4 mb-2">Tantangan</h4>
-        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+        <h4 class="text-xl font-semibold text-dark-maroon mt-4 mb-2">
+          Tantangan
+        </h4>
+        <ul class="list-disc pl-5 space-y-1">
           <li>
             Mengembangkan sistem streaming video yang efisien dengan berbagai
             kualitas.
@@ -832,29 +862,31 @@
             Mengimplementasikan dashboard analitik untuk melacak kemajuan siswa.
           </li>
         </ul>
-        <h4 class="text-xl font-semibold text-gray-800 mt-4 mb-2">
+        <h4 class="text-xl font-semibold text-dark-maroon mt-4 mb-2">
           Hasil & Dampak
         </h4>
-        <p class="text-gray-700">
+        <p>
           Peningkatan engagement siswa sebesar 40% dan kemudahan bagi pengajar
           dalam mengelola konten pembelajaran.
         </p>
-        <h4 class="text-xl font-semibold text-gray-800 mt-4 mb-2">Teknologi</h4>
+        <h4 class="text-xl font-semibold text-dark-maroon mt-4 mb-2">
+          Teknologi
+        </h4>
         <div class="flex flex-wrap gap-2">
           <span
-            class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+            class="bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
             >React</span
           >
           <span
-            class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+            class="bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
             >Redux</span
           >
           <span
-            class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+            class="bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
             >Node.js</span
           >
           <span
-            class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+            class="bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
             >MongoDB</span
           >
         </div>
@@ -862,19 +894,21 @@
 
       <div id="project2-details" data-title="E-Commerce Dashboard">
         <img
-          src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect fill='%237C3AED' width='800' height='400'/%3E%3Ctext fill='rgba(255,255,255,0.8)' font-family='Arial' font-size='32' x='400' y='200' text-anchor='middle'%3EE-Commerce Dashboard Screenshot%3C/text%3E%3C/svg%3E"
+          src="https://placehold.co/800x400/B03052/EBE8DB?text=E-Commerce+Dashboard"
           alt="E-Commerce Dashboard"
           class="w-full rounded-lg mb-6"
         />
-        <h4 class="text-xl font-semibold text-gray-800 mb-2">
+        <h4 class="text-xl font-semibold text-dark-maroon mb-2">
           Deskripsi Proyek
         </h4>
-        <p class="text-gray-700">
+        <p>
           Dashboard admin e-commerce yang komprehensif untuk UMKM lokal,
           memungkinkan pengelolaan produk, pesanan, dan analitik penjualan.
         </p>
-        <h4 class="text-xl font-semibold text-gray-800 mt-4 mb-2">Tantangan</h4>
-        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+        <h4 class="text-xl font-semibold text-dark-maroon mt-4 mb-2">
+          Tantangan
+        </h4>
+        <ul class="list-disc pl-5 space-y-1">
           <li>
             Merancang antarmuka yang intuitif untuk pengguna dengan berbagai
             tingkat keterampilan teknis.
@@ -885,29 +919,31 @@
           </li>
           <li>Mengintegrasikan berbagai metode pembayaran dan pengiriman.</li>
         </ul>
-        <h4 class="text-xl font-semibold text-gray-800 mt-4 mb-2">
+        <h4 class="text-xl font-semibold text-dark-maroon mt-4 mb-2">
           Hasil & Dampak
         </h4>
-        <p class="text-gray-700">
+        <p>
           Efisiensi operasional meningkat 60% dan kesalahan inventaris berkurang
           hingga 90%.
         </p>
-        <h4 class="text-xl font-semibold text-gray-800 mt-4 mb-2">Teknologi</h4>
+        <h4 class="text-xl font-semibold text-dark-maroon mt-4 mb-2">
+          Teknologi
+        </h4>
         <div class="flex flex-wrap gap-2">
           <span
-            class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+            class="bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
             >Vue.js</span
           >
           <span
-            class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+            class="bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
             >Express</span
           >
           <span
-            class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+            class="bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
             >MySQL</span
           >
           <span
-            class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+            class="bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
             >JWT</span
           >
         </div>
@@ -915,20 +951,22 @@
 
       <div id="project3-details" data-title="Aplikasi Manajemen Tugas">
         <img
-          src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect fill='%232563EB' width='800' height='400'/%3E%3Ctext fill='rgba(255,255,255,0.8)' font-family='Arial' font-size='32' x='400' y='200' text-anchor='middle'%3ETask Management App Screenshot%3C/text%3E%3C/svg%3E"
+          src="https://placehold.co/800x400/B03052/EBE8DB?text=Task+Management+App"
           alt="Task Management App"
           class="w-full rounded-lg mb-6"
         />
-        <h4 class="text-xl font-semibold text-gray-800 mb-2">
+        <h4 class="text-xl font-semibold text-dark-maroon mb-2">
           Deskripsi Proyek
         </h4>
-        <p class="text-gray-700">
+        <p>
           Aplikasi mobile untuk manajemen tugas dan kolaborasi tim dengan
           kemampuan offline-first, memungkinkan tim untuk bekerja dalam berbagai
           kondisi konektivitas.
         </p>
-        <h4 class="text-xl font-semibold text-gray-800 mt-4 mb-2">Tantangan</h4>
-        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+        <h4 class="text-xl font-semibold text-dark-maroon mt-4 mb-2">
+          Tantangan
+        </h4>
+        <ul class="list-disc pl-5 space-y-1">
           <li>
             Mengembangkan aplikasi yang dapat berfungsi dengan baik dalam mode
             offline dan online.
@@ -941,29 +979,31 @@
             Memastikan kinerja aplikasi yang baik di berbagai perangkat mobile.
           </li>
         </ul>
-        <h4 class="text-xl font-semibold text-gray-800 mt-4 mb-2">
+        <h4 class="text-xl font-semibold text-dark-maroon mt-4 mb-2">
           Hasil & Dampak
         </h4>
-        <p class="text-gray-700">
+        <p>
           Produktivitas tim meningkat 35% dan waktu penyelesaian proyek
           berkurang 20%.
         </p>
-        <h4 class="text-xl font-semibold text-gray-800 mt-4 mb-2">Teknologi</h4>
+        <h4 class="text-xl font-semibold text-dark-maroon mt-4 mb-2">
+          Teknologi
+        </h4>
         <div class="flex flex-wrap gap-2">
           <span
-            class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+            class="bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
             >React Native</span
           >
           <span
-            class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+            class="bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
             >Firebase</span
           >
           <span
-            class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+            class="bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
             >Redux</span
           >
           <span
-            class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium"
+            class="bg-dusty-rose/30 text-maroon-accent font-semibold px-3 py-1 rounded-full text-sm"
             >Firestore</span
           >
         </div>
@@ -976,6 +1016,7 @@
         const modalTitle = document.getElementById("modalTitle");
         const modalContent = document.getElementById("modalContent");
         const modalDialog = modal.querySelector(".transform");
+
         window.showProjectDetails = function (projectId) {
           const projectDetailElement = document.getElementById(
             projectId + "-details"
@@ -983,8 +1024,10 @@
           if (projectDetailElement) {
             modalTitle.textContent = projectDetailElement.dataset.title;
             modalContent.innerHTML = projectDetailElement.innerHTML;
+
             modal.classList.remove("hidden");
             document.body.style.overflow = "hidden";
+
             setTimeout(() => {
               modal.classList.add("opacity-100");
               modalDialog.classList.remove("scale-95");
@@ -992,36 +1035,22 @@
             }, 10);
           }
         };
+
         window.closeModal = function () {
           modal.classList.remove("opacity-100");
           modalDialog.classList.add("scale-95");
           modalDialog.classList.remove("scale-100");
+
           setTimeout(() => {
             modal.classList.add("hidden");
             document.body.style.overflow = "auto";
           }, 300);
         };
+
         modal.addEventListener("click", function (event) {
           if (event.target === modal) {
             closeModal();
           }
-        });
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener("click", function (e) {
-            const href = this.getAttribute("href");
-            if (href.length > 1) {
-              e.preventDefault();
-              const targetElement = document.querySelector(href);
-              if (targetElement) {
-                const offsetTop =
-                  href === "#home" ? 0 : targetElement.offsetTop;
-                window.scrollTo({
-                  top: offsetTop,
-                  behavior: "smooth",
-                });
-              }
-            }
-          });
         });
       });
     </script>
